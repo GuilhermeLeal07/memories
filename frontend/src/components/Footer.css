@@ -1,0 +1,21 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  padding: 1.5rem;
+  background: #211568;
+  color: rgba(255, 255, 255, 0.78);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  footer {
+    min-height: 84px;
+  }
+}

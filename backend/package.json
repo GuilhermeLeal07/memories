@@ -1,0 +1,23 @@
+{
+  "name": "pj-memories-backend",
+  "version": "1.0.0",
+  "description": "API do projeto Pj Memories",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["express", "mongodb", "memories"],
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "mongoose": "^9.10.2",
+    "multer": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

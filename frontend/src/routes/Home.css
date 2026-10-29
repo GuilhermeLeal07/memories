@@ -1,0 +1,122 @@
+.home {
+  width: min(100% - 2.5rem, var(--content-width));
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5rem) 0;
+}
+
+.home h2 {
+  max-width: 760px;
+  margin: 0 auto 0.8rem;
+  color: var(--color-primary);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  text-align: center;
+}
+
+.home > p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.memories-container {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(min(100%, 245px), 1fr));
+  align-items: stretch;
+  gap: clamp(1rem, 2.5vw, 1.6rem);
+  margin-top: 2.6rem;
+}
+
+.memory {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.9rem;
+  padding: 0.85rem;
+  overflow: hidden;
+  border: 1px solid rgba(227, 227, 239, 0.95);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  animation: card-enter 420ms both;
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.memory:hover {
+  transform: translateY(-5px);
+  border-color: #D0CBF4;
+  box-shadow: var(--shadow-card-hover);
+}
+
+.memory img {
+  width: 100%;
+  height: clamp(180px, 19vw, 230px);
+  object-fit: cover;
+  border-radius: 13px;
+  background: var(--color-primary-soft);
+  transition: transform 300ms ease;
+}
+
+.memory:hover img {
+  transform: scale(1.015);
+}
+
+.memory p {
+  display: -webkit-box;
+  min-height: 1.6em;
+  margin: 0.1rem 0 0;
+  overflow: hidden;
+  color: var(--color-text);
+  font-family: "Manrope", sans-serif;
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.memory .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+@keyframes card-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    width: min(100% - 1.5rem, var(--content-width));
+    padding: 2.25rem 0 3rem;
+  }
+
+  .memories-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.8rem;
+  }
+
+  .memory {
+    padding: 0.7rem;
+    border-radius: 17px;
+  }
+
+  .memory img {
+    height: 220px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .memories-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

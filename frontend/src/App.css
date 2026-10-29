@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  width: 100%;
+  min-height: 70vh;
+  background: transparent;
+}
+
+.container > * {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .container {
+    min-height: 65vh;
+  }
+}

@@ -1,0 +1,17 @@
+
+# Credenciais e variáveis de ambiente
+.env
+.env.*
+!.env.example
+credenciais/
+
+# Dependências
+node_modules/
+
+# Builds
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*

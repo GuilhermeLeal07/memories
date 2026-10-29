@@ -1,0 +1,121 @@
+.memory-page {
+  display: flex;
+  width: min(100% - 2.5rem, 850px);
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.25rem;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.memory-page > img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-primary-soft);
+  box-shadow: var(--shadow-card);
+}
+
+.memory-page > h2 {
+  margin: 0;
+  font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+  overflow-wrap: anywhere;
+}
+
+.memory-page > p {
+  margin: 0;
+  color: #454558;
+  font-size: 1.03rem;
+  line-height: 1.85;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.btn-delete {
+  align-self: flex-start;
+  margin: 0.2rem 0 1rem;
+  background: var(--color-danger);
+  box-shadow: 0 5px 12px rgba(180, 35, 50, 0.15);
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: var(--color-danger-hover);
+  box-shadow: 0 9px 20px rgba(180, 35, 50, 0.22);
+}
+
+.comment-form,
+.comments-container {
+  width: 100%;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+.comment-form h3,
+.comments-container h3 {
+  margin: 0 0 1.2rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+.comment-form input[type="submit"] {
+  align-self: flex-start;
+  min-width: 130px;
+}
+
+.comments-container > p {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.comment {
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.comment:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+
+.comment-name {
+  margin-bottom: 0.4rem;
+  color: var(--color-primary);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.comment-text {
+  margin: 0;
+  color: #454558;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .memory-page {
+    width: min(100% - 1.5rem, 850px);
+    gap: 1rem;
+    padding: 1.6rem 0 2.5rem;
+  }
+
+  .memory-page > img {
+    max-height: 360px;
+    border-radius: 15px;
+  }
+
+  .btn-delete,
+  .comment-form input[type="submit"] {
+    width: 100%;
+  }
+
+  .comment-form,
+  .comments-container {
+    border-radius: 16px;
+  }
+}
