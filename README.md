@@ -2,6 +2,8 @@
 
 Aplicação web para registrar e consultar memórias pessoais com título, descrição e imagem, além de permitir comentários. O projeto utiliza **React** no front-end, uma **API REST com Node.js e Express** e **MongoDB** com Mongoose.
 
+**Acesse o projeto:** [Pj Memories – Aplicação publicada](https://memories-puce-two.vercel.app)
+
 > **Sobre a origem:** este projeto começou como um exercício de estudo baseado em material de curso. Este repositório documenta correções e melhorias técnicas realizadas durante sua preparação para portfólio, sem apresentar a base original como autoria integral.
 
 ## Funcionalidades
@@ -119,7 +121,9 @@ Abra no navegador o endereço local informado pelo Vite. Sempre que alterar vari
 
 ## Publicação (deploy)
 
-A aplicação pode ser publicada usando, por exemplo, Vercel ou Netlify para o front-end, Render para a API e MongoDB Atlas para o banco. A escolha da plataforma deve considerar as condições atuais do serviço e os requisitos de armazenamento.
+A aplicação está publicada utilizando Vercel para o front-end, Render para a API e MongoDB Atlas para o banco.
+
+**Acesse:** [https://memories-puce-two.vercel.app](https://memories-puce-two.vercel.app)
 
 Configure as variáveis de ambiente diretamente nas configurações de cada serviço:
 
